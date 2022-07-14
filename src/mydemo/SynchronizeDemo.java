@@ -1,6 +1,8 @@
+package mydemo;
+
 import java.util.concurrent.CountDownLatch;
 
-public class Lu {
+public class SynchronizeDemo {
 
     public static void main(String[] args) throws InterruptedException {
 

@@ -1,6 +1,6 @@
 package slidingwindow;
 
-public class LeetCode03 {
+public class LC03_Longest_Substring_Without_Repeating_Characters {
     public static void main(String[] args) {
         String[] tests = new String[]{
                 "abcabcbb",

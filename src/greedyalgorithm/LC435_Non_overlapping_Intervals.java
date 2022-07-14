@@ -1,6 +1,8 @@
+package greedyalgorithm;
+
 import java.util.Arrays;
 
-public class Liyang {
+public class LC435_Non_overlapping_Intervals {
 
     public static void main(String[] args) {
         int[][] tests = new int[][]{{1,5},{2,4},{3,5},{5,9},{6,8},{8,10}};
