@@ -6,8 +6,12 @@ public class LC19_Remove_The_Nth_Node_Of_LinkedList {
         System.out.println(removeNthFromEnd(node, 2));
     }
 
-    static int cur = 0;
+
     public static ListNode removeNthFromEnd(ListNode head, int n) {
+        return helper(head, n, 0);
+    }
+
+    private static ListNode helper(ListNode head, int n, int cur) {
         if(head == null) {
             return null;
         }
@@ -18,6 +22,7 @@ public class LC19_Remove_The_Nth_Node_Of_LinkedList {
         }
         return head;
     }
+
 
     public static class ListNode {
         int val;
