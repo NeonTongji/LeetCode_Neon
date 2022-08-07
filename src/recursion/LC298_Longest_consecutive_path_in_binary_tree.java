@@ -14,15 +14,19 @@ public class LC298_Longest_consecutive_path_in_binary_tree {
          */
 
         TreeNode treeNode =
-                new TreeNode(5,
-                        new TreeNode(4),
+                new TreeNode(4,
+
+                        new TreeNode(3,
+                                new TreeNode(2),
+                                null),
+
                         new TreeNode(2,
-                                new TreeNode(3),
-                                new TreeNode(4))
+                                null,
+                                new TreeNode(3))
                 );
 
         longestConsecutivePathInBinaryTree(treeNode, 1, 1);
-//        longestConsecutivePathInBinaryTree(treeNode, 1, -1);
+        longestConsecutivePathInBinaryTree(treeNode, 1, -1);
         System.out.println(max);
     }
 
@@ -43,7 +47,7 @@ public class LC298_Longest_consecutive_path_in_binary_tree {
             if(node.right.val == node.val + inc) {
                 longestConsecutivePathInBinaryTree(node.right, len + 1, inc);
             } else {
-                longestConsecutivePathInBinaryTree(node.left, 1, inc);
+                longestConsecutivePathInBinaryTree(node.right, 1, inc);
             }
         }
     }
